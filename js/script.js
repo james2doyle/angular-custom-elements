@@ -43740,7 +43740,7 @@ window.addEventListener('customElementsLoaded', () => {
         resolve: {
           mockData: function ($http) {
             // $http returns a promise for the url data
-            return $http({ method: 'GET', url: '/mock-data.json' });
+            return $http({ method: 'GET', url: '/angular-custom-elements/mock-data.json' });
           }
         },
         controller: function ($scope, mockData) {
