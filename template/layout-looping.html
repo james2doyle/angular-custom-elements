@@ -1,0 +1,8 @@
+<div class="mt-4">
+  <p>Loop through async data but using custom elements</p>
+  <!-- example of bad JSON data in the binding -->
+  <merge-label person="{first_name:'',last_name:,}"></merge-label>
+  <div ng-repeat="person in $ctrl.people">
+    <merge-label person="{{person}}"></merge-label>
+  </div>
+</div>

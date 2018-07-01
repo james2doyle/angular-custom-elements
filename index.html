@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="ngCustomElements" class="no-js">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Angular Custom Elements</title>
+    <style>
+      body {
+        opacity: 0;
+        transition: opacity 0.5s 0.2s ease;
+      }
+      body.custom-elements-loaded {
+        opacity: 1;
+      }
+    </style>
+    <script src="/js/load-polyfill.js" type="text/javascript" charset="utf-8" defer></script>
+    <link href="https://unpkg.com/primer@10.6.1/build/build.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="main-app">
+    <div class="container">
+      <nav class="UnderlineNav">
+        <div class="UnderlineNav-body">
+          <a ui-sref="home" ui-sref-active="active" class="UnderlineNav-item" ng-class="{ selected: $state.is('home') }" role="tab">Home</a>
+          <a ui-sref="functions" ui-sref-active="active" class="UnderlineNav-item" ng-class="{ selected: $state.is('functions') }" role="tab">Functions</a>
+          <a ui-sref="directives" ui-sref-active="active" class="UnderlineNav-item" ng-class="{ selected: $state.is('directives') }" role="tab">Directives</a>
+          <a ui-sref="events" ui-sref-active="active" class="UnderlineNav-item" ng-class="{ selected: $state.is('events') }" role="tab">Events</a>
+          <a ui-sref="looping" ui-sref-active="active" class="UnderlineNav-item" ng-class="{ selected: $state.is('looping') }" role="tab">Looping</a>
+        </div>
+      </nav>
+      <ui-view></ui-view>
+    </div>
+    <script src="/js/script.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
